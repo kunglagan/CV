@@ -1,0 +1,99 @@
+
+
+body {
+margin: 0;
+font-family: Roboto, sans-serif;
+/* Местоположение фоновой картинки */   background-image: url(images/bg.gif);      
+/* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */   background-position: center center;      
+/* Фон не повторяется */   background-repeat: no-repeat;      
+/* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */   background-attachment: fixed;      
+/* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/   background-size: cover;      
+}
+
+.container {
+  padding: 0 10px;
+  margin-left: 8px;
+  min-width: 320px;
+  max-width: 960px;
+
+}
+
+  /* Свойства ссылок */
+a {
+
+  text-decoration:none;
+  margin-bottom: 1.2em;
+  margin-right: 1.2em;
+  position: relative;
+}
+
+  /* Что делать при наведении на ссылку */
+a:hover {
+  color:#FFD700;
+}
+
+
+  /* Свойства фотографии*/
+.photo {
+  border-radius: 100px;
+  /* Радиус скругления */
+  border: 3px solid transparent;
+  /* Параметры рамки */
+  box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.52);
+  object-fit: cover;
+
+
+}
+
+  /* Эффект наведения на картинку */
+.photo:hover {
+  border: 3px solid #88C5DD;
+}
+
+img.bg {
+  /* Устанавливаем правила для заполнения фоном */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Устанавливаем коэффициент пропорциональности */
+  width: 100%;
+  height: auto;
+
+  /* Устанавливаем позиционирование */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Определяется свое для каждого конкретного изображения */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: #c6dde6;
+  border: 3px solid #fff;
+  outline: none;
+  transition: 1s ease-in-out;
+  box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.52);
+}
+
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #88C5DD;
+  border: 3px solid #68b6d4;
+}
+
+
+.btn span {
+  color: black;
+  font-size: 18px;
+  font-weight: 100;
+}
